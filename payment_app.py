@@ -2,7 +2,6 @@ class PaymentApp:
     # Python Class init function.
     def __init__(self, usernames):
         self.accounts = {username: 0 for username in usernames}
-        print(self.accounts)
 
     # Adding users to the payment app.
     def add_user(self, username):
