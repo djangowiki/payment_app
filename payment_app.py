@@ -29,16 +29,3 @@ class PaymentApp:
         if self.accounts[username] < amount:
             raise Exception(f"{username} has insufficient funds to withdraw")
         self.accounts[username] -= amount
-
-
-service = PaymentApp(["gabriel", "chibie", "jeff"])
-
-service.add_user("chioma")
-
-service.deposit("chioma", 100)
-
-print(service.get_balance("chioma"))
-
-service.transfer("chioma", "gabriel", 20)
-
-print(service.get_balance("chioma"))
